@@ -1,0 +1,52 @@
+#	input  sw,rst,rx_bl,clkf;
+#	output wire tx_bl;
+#	output wire [7:0]leds;
+
+NET "clkf" LOC = B8;
+NET "sw" LOC = B18;
+NET "rst" LOC = D18;
+NET "rx_bl" LOC = T17;#M15;#RX
+NET "tx_bl" LOC = R15;#L17;#TX
+
+##SALIDA MOTOR
+NET "izq" LOC = G13;#Motor izqu
+NET "der" LOC = H16;#Moto Derecha
+
+#SALIDA MOTOR prueba con leds
+#NET "izq" LOC = J14;#Motor izqu
+#NET "der" LOC = J15;#Moto Derecha
+
+
+NET "on_off_l" LOC = J16;#prende apaga luz
+
+
+NET "leds[0]" LOC = J14;
+NET "leds[1]" LOC = J15;
+NET "leds[2]" LOC = K15;
+NET "leds[3]" LOC = K14;
+NET "leds[4]" LOC = E17;
+NET "leds[5]" LOC = P15;
+NET "leds[6]" LOC = F4;
+NET "leds[7]" LOC = R4;
+
+
+# Clock signal
+#NET "clkf"            LOC = "V10" | IOSTANDARD = "LVCMOS33";   #Bank = 2, pin name = IO_L30N_GCLK0_USERCCLK,            Sch name = GCLK
+#Net "clkf" TNM_NET = sys_clk_pin;
+#TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100000 MHz;
+# 
+#
+#NET "sw" LOC = C9;
+#NET "rst" LOC = D9;
+#NET "rx_bl" LOC = P11;#RX
+#NET "tx_bl" LOC = N10;#TX
+#
+#NET "leds[0]" LOC = U16;
+#NET "leds[1]" LOC = V16;
+#NET "leds[2]" LOC = U15;
+#NET "leds[3]" LOC = V15;
+#NET "leds[4]" LOC = M11;
+#NET "leds[5]" LOC = N11;
+#NET "leds[6]" LOC = R11;
+#NET "leds[7]" LOC = T11;
+
